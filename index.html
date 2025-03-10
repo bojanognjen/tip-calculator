@@ -11,32 +11,55 @@
 </head>
 <body>
 
-  <main class="container">
-    <h1 class="title">Spli<br>tter</h1>
-    <section class="calculator">
+  <img src="images/logo.svg" alt="logo" class="title-logo">
+  
+  <form class="calculator">
 
-    </section>
-  </main>
+      <section class="span-and-gray-space">
+        <span class="label">Bill</span>
+        <div class="gray-space">
+          <img src="images/icon-dollar.svg" alt="dollar" class="icon">
+          <span class="upper-number">142.55</span>
+        </div>
+      </section>
 
-  Bill
+      <section class="select-tip">
+        <span class="label">Select Tip %</span>
+        <div class="percent-div">
+          <button class="percent-button five">5%</button>
+          <button class="percent-button ten">10%</button>
+          <button class="percent-button fifteen">15%</button>
+          <button class="percent-button twenty-five">25%</button>
+          <button class="percent-button fifty">50%</button>
+          <button class="percent-button custom">Custom</button>
+        </div>
+      </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+      <section class="span-and-gray-space">
+        <span class="label">Number of People</span>
+        <div class="gray-space">
+          <img src="images/icon-person.svg" alt="dollar" class="icon">
+          <span class="upper-number">5</span>
+        </div>
+      </section>
 
-  Number of People
+      <section class="per-person">
+        <div class="per-person">
+          <span class="per-person__title">Tip Amount</span>
+          <span class="per-person__below">/ person</span>
+          <span class="amount-per-person">$4.27</span>
+        </div>
+        <div class="per-person">
+          <span class="per-person__title">Total</span>
+          <span class="per-person__below">/ person</span>
+          <span class="total-per-person">$32.79</span>
+        </div>
+        <button class="reset">Reset</button>
+      </section>
 
-  Tip Amount
-  / person
+    </form>
 
-  Total
-  / person
-
-  Reset
+  
   <script src="script.js"></script>
 </body>
 </html>
