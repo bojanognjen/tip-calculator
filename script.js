@@ -1,26 +1,19 @@
-// const billInput = document.querySelector('.upper-number');
-// const peopleInput = document.querySelector(".lower-number");
-// const tipAmountDisplay = document.querySelector(".amount-per-person");
-// const totalAmountDisplay = document.querySelector(".total-per-person");
-// const resetButton = document.querySelector(".reset");
+const billInput = document.querySelector('.upper-number');
+const peopleInput = document.querySelector(".lower-number");
+const tipAmountDisplay = document.querySelector(".amount-per-person");
+const totalAmountDisplay = document.querySelector(".total-per-person");
+const resetButton = document.querySelector(".reset");
 
-// let billValue = 0;
-// let tipValue = 0;
-// let peopleCount = 1;
+let billValue = 0;
+let tipValue = 0;
+let peopleCount = 1;
 
 
 
-// const billInput = document.querySelector(".upper-number");
 // const customTipInput = document.querySelector(".custom input");
-// const peopleInput = document.querySelector(".lower-number");
-// const tipButtons = document.querySelectorAll(".percent-button:not(.custom)");
-// const tipAmountDisplay = document.querySelector(".amount-per-person");
-// const totalAmountDisplay = document.querySelector(".total-per-person");
-// const resetButton = document.querySelector(".reset");
 
-// let billValue = 0;
-// let tipValue = 0;
-// let peopleCount = 1;
+// const tipButtons = document.querySelectorAll(".percent-button:not(.custom)");
+
 
 // // Function to calculate and update values
 // function calculateTip() {

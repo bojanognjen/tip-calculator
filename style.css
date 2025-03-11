@@ -122,6 +122,14 @@
     border: none;
   }
 
+  input {
+    text-align: right;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+
   .custom > input {
     width: 60%;
     height: 90%;
@@ -148,6 +156,9 @@
     border: none;
     border-radius: .3rem;
     font-size: 1.5rem;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
   }
 
   .custom {
