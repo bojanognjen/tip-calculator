@@ -15,33 +15,33 @@
   
   <form class="calculator">
 
-      <section class="span-and-gray-space">
-        <span class="label">Bill</span>
+      <fieldset class="span-and-gray-space">
+        <legend class="label">Bill</legend>
         <div class="gray-space">
           <img src="images/icon-dollar.svg" alt="dollar" class="icon">
-          <input type="number" class="upper-number">
+          <input type="text" class="upper-number">
         </div>
-      </section>
+      </fieldset>
 
-      <section class="select-tip">
-        <span class="label">Select Tip %</span>
+      <fieldset class="select-tip">
+        <legend class="label">Select Tip %</legend>
         <div class="percent-div">
           <button class="percent-button five">5%</button>
           <button class="percent-button ten">10%</button>
           <button class="percent-button fifteen">15%</button>
           <button class="percent-button twenty-five">25%</button>
           <button class="percent-button fifty">50%</button>
-          <div class="percent-button custom"><input type="number" placeholder="Custom"></div>
+          <div class="percent-button custom"><input type="text" placeholder="Custom"></div>
         </div>
-      </section>
+      </fieldset>
 
-      <section class="span-and-gray-space">
-        <span class="label">Number of People</span>
+      <fieldset class="span-and-gray-space">
+        <legend class="label">Number of People</legend>
         <div class="gray-space">
           <img src="images/icon-person.svg" alt="dollar" class="icon">
-          <input type="number" class="lower-number">
+          <input type="text" class="lower-number">
         </div>
-      </section>
+      </fieldset>
 
       <section class="last-section">
         <div class="per-person">
@@ -63,3 +63,27 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+<!-- <fieldset class="select-tip">
+  <legend class="label">Select Tip %</legend>
+  <div class="percent-div">
+    <input type="radio" id="tip-5" name="tip" value="5" class="tip-input percent-button five">
+    <label for="tip-5" class="percent-button five">5%</label>
+
+    <input type="radio" id="tip-10" name="tip" value="10" class="tip-input percent-button ten">
+    <label for="tip-10" class="percent-button ten">10%</label>
+
+    <input type="radio" id="tip-15" name="tip" value="15" class="tip-input percent-button fifteen">
+    <label for="tip-15" class="percent-button fifteen">15%</label>
+
+    <input type="radio" id="tip-25" name="tip" value="25" class="tip-input percent-button twenty-five">
+    <label for="tip-25" class="percent-button twenty-five">25%</label>
+
+    <input type="radio" id="tip-50" name="tip" value="50" class="tip-input percent-button fifty">
+    <label for="tip-50" class="percent-button fifty">50%</label>
+
+    <input type="radio" id="custom-tip" name="tip" class="tip-input percent-button custom">
+    <label for="custom-tip" class="percent-button custom">Custom %</label>
+    <input type="text" id="custom-tip-value" class="custom-tip" placeholder="Custom %" min="0">
+  </div>
+</fieldset> -->

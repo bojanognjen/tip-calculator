@@ -94,6 +94,7 @@
   .label {
     font-size: 1rem;
     color: var(--dark-grayish-cyan);
+    margin-bottom: .5rem;
   }
 
   .gray-space {
@@ -108,12 +109,6 @@
     padding: .8rem 1rem;
   }
 
-  .span-and-gray-space,
-  .select-tip {
-    display: grid;
-    grid-gap: .5rem;
-  }
-
   .upper-number,
   .lower-number{
     margin-left: auto;
@@ -121,8 +116,6 @@
     font-size: 1.5rem;
     color: var(--very-dark-cyan);
     margin-right: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
     background-color: transparent;
     width: 80%;
     height: 80%;
@@ -132,8 +125,6 @@
   .custom > input {
     width: 60%;
     height: 90%;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
     border: none;
     background-color: transparent;
   }
@@ -226,6 +217,10 @@
   .gray-space:has(> input.upper-number):hover {
     outline: 2px solid var(--strong-cyan);
     cursor: pointer;
+  }
+
+  fieldset {
+    border: none;
   }
 
   
