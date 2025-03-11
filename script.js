@@ -3,10 +3,27 @@ const peopleInput = document.querySelector(".lower-number");
 const tipAmountDisplay = document.querySelector(".amount-per-person");
 const totalAmountDisplay = document.querySelector(".total-per-person");
 const resetButton = document.querySelector(".reset");
+const form = document.querySelector('.calculator');
 
-let billValue = 0;
-let tipValue = 0;
-let peopleCount = 1;
+function submiting(e) {
+e.preventDefault();
+}
+
+form.addEventListener('submit', submiting);
+
+
+
+
+
+
+
+
+
+
+
+// let billValue = 0;
+// let tipValue = 0;
+// let peopleCount = 1;
 
 
 
