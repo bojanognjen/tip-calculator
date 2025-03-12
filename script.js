@@ -4,26 +4,46 @@ const tipAmountDisplay = document.querySelector(".amount-per-person");
 const totalAmountDisplay = document.querySelector(".total-per-person");
 const resetButton = document.querySelector(".reset");
 const form = document.querySelector('.calculator');
+const radioButtons = document.querySelectorAll('.tip-input');
+const customTipInput = document.querySelector(".custom input");
+customTipInput.addEventListener('change', (event)=> {
+    document.querySelector('#custom-tip').value = event.target.value;
+});
+
+
+
+let billValue = 0;
+let tipValue = 0;
+let peopleCount = 0;
 
 function submiting(e) {
 e.preventDefault();
+calculateTip();
 }
+
+
+let radioValue = () => {
+    
+}
+
+function calculateTip(){
+    let selectedValue = document.querySelector('input[name="tip"]:checked')?.value;
+
+    console.log(selectedValue);
+
+    let total = billInput.value * peopleInput.value;
+    
+    totalAmountDisplay.innerHTML = `${total}`;
+
+}
+
+resetButton.addEventListener('click', ()=> {
+
+})
 
 form.addEventListener('submit', submiting);
 
 
-
-
-
-
-
-
-
-
-
-// let billValue = 0;
-// let tipValue = 0;
-// let peopleCount = 1;
 
 
 
