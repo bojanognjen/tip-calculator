@@ -52,7 +52,7 @@ function calculateTip(){
     total = total.toFixed(2);
 
     totalAmountDisplay.innerHTML = `$${total}`;
-    let tipPerAmount = ((billInput.value * percent) - billInput.value) / 5;
+    let tipPerAmount = ((billInput.value * percent) - billInput.value) / peopleInput.value;
     peopleInput.value == 0 ? tipPerAmount = 0 : "";
     tipPerAmount = tipPerAmount.toFixed(2);
     tipAmountDisplay.innerHTML = `$${tipPerAmount}`;
