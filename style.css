@@ -135,6 +135,7 @@
     height: 90%;
     border: none;
     background-color: transparent;
+    color: var(--very-dark-cyan);
   }
 
   .upper-number:focus,
@@ -219,7 +220,8 @@
   }
 
   .percent-div > *:not(:last-child):hover,
-  .reset:hover {
+  .reset:hover,
+  .tip-input:checked + label {
     background-color: hsl(172, 67%, 80%);
     color: var(--very-dark-cyan);
   }

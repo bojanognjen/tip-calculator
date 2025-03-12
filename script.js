@@ -6,39 +6,64 @@ const resetButton = document.querySelector(".reset");
 const form = document.querySelector('.calculator');
 const radioButtons = document.querySelectorAll('.tip-input');
 const customTipInput = document.querySelector(".custom input");
+const inputs = document.querySelectorAll('input');
+
+document.getElementById("custom-tip-value").addEventListener("focus", function() {
+    document.getElementById("custom-tip").checked = true;
+});
+
+inputs.forEach(input => {
+    input.addEventListener('keydown', (e)=> {
+        if(e.key === 'Enter') {
+            e.preventDefault();
+            submiting(e);
+        }
+
+})
+
+})
+
+radioButtons.forEach(radioBtn => {
+    radioBtn.addEventListener('change', (e)=> {
+            e.preventDefault();
+            submiting(e);
+
+})
+})
+
 customTipInput.addEventListener('change', (event)=> {
     document.querySelector('#custom-tip').value = event.target.value;
 });
-
-
-
-let billValue = 0;
-let tipValue = 0;
-let peopleCount = 0;
 
 function submiting(e) {
 e.preventDefault();
 calculateTip();
 }
 
-
-let radioValue = () => {
-    
-}
-
 function calculateTip(){
     let selectedValue = document.querySelector('input[name="tip"]:checked')?.value;
-
     console.log(selectedValue);
 
-    let total = billInput.value * peopleInput.value;
-    
-    totalAmountDisplay.innerHTML = `${total}`;
+    let percent = parseFloat(`1.${selectedValue}`);
 
+    let total = billInput.value / peopleInput.value * percent;
+    peopleInput.value == 0 ? total = 0 : "";
+    peopleInput.value == 0 ? total = 0 : "";
+    total = total.toFixed(2);
+
+    totalAmountDisplay.innerHTML = `$${total}`;
+    let tipPerAmount = ((billInput.value * percent) - billInput.value) / 5;
+    peopleInput.value == 0 ? tipPerAmount = 0 : "";
+    tipPerAmount = tipPerAmount.toFixed(2);
+    tipAmountDisplay.innerHTML = `$${tipPerAmount}`;
 }
 
-resetButton.addEventListener('click', ()=> {
-
+resetButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    billInput.value = "";
+    customTipInput.value = "";
+    peopleInput.value = "";
+    calculateTip();
 })
 
 form.addEventListener('submit', submiting);
