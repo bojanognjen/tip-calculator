@@ -4,6 +4,7 @@
     /* Primary colors */
 
     --strong-cyan: hsl(172, 67%, 45%);
+    --alert-color: #e17457;
 
     /* Neutral colors */
 
@@ -168,6 +169,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .number-of-people {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .alert {
+    color: var(--alert-color);
+    display: none;
   }
 
   .last-section {

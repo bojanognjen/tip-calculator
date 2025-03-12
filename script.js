@@ -7,6 +7,7 @@ const form = document.querySelector('.calculator');
 const radioButtons = document.querySelectorAll('.tip-input');
 const customTipInput = document.querySelector(".custom input");
 const inputs = document.querySelectorAll('input');
+const alert = document.querySelector('.alert');
 
 document.getElementById("custom-tip-value").addEventListener("focus", function() {
     document.getElementById("custom-tip").checked = true;
@@ -42,7 +43,7 @@ calculateTip();
 
 function calculateTip(){
     let selectedValue = document.querySelector('input[name="tip"]:checked')?.value;
-    console.log(selectedValue);
+    // customTipInput.checked == false ? customTipInput.value = "" : "";
 
     let percent = parseFloat(`1.${selectedValue}`);
 
@@ -53,8 +54,19 @@ function calculateTip(){
 
     totalAmountDisplay.innerHTML = `$${total}`;
     let tipPerAmount = ((billInput.value * percent) - billInput.value) / peopleInput.value;
+
+    if(peopleInput.value == 0) {
+        tipPerAmount = 0;
+        peopleInput.parentNode.style.outline = "2px solid #e17052";
+        alert.style.display = "block";
+    } else {
+        alert.style.display = "none";
+        peopleInput.parentNode.style.outline = "none";
+    }
+
     peopleInput.value == 0 ? tipPerAmount = 0 : "";
     tipPerAmount = tipPerAmount.toFixed(2);
+    
     tipAmountDisplay.innerHTML = `$${tipPerAmount}`;
 }
 

@@ -42,12 +42,15 @@
           <label for="tip-50" class="percent-button fifty">50%</label>
       
           <input type="radio" id="custom-tip" name="tip" value="" class="tip-input custom">
-          <label for="custom-tip" class="percent-button custom"><input type="text" id="custom-tip-value" class="custom-tip" placeholder="Custom" min="0">%</label>
+          <label for="custom-tip" class="percent-button custom"><input type="text" id="custom-tip-value" class="custom-tip" placeholder="Custom" min="0"></label>
         </div>
       </fieldset>
 
       <fieldset class="span-and-gray-space">
-        <legend class="label">Number of People</legend>
+        <div class="number-of-people">
+          <legend class="label">Number of People</legend>
+          <span class="alert">Can't be zero</span>
+        </div>
         <div class="gray-space">
           <img src="images/icon-person.svg" alt="dollar" class="icon">
           <input type="text" class="lower-number" placeholder="0">
