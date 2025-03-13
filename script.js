@@ -5,13 +5,19 @@ const totalAmountDisplay = document.querySelector(".total-per-person");
 const resetButton = document.querySelector(".reset");
 const form = document.querySelector('.calculator');
 const radioButtons = document.querySelectorAll('.tip-input');
-const customTipInput = document.querySelector(".custom input");
+const customTipInput = document.querySelector(".custom-tip");
 const inputs = document.querySelectorAll('input');
 const alert = document.querySelector('.alert');
 
-document.getElementById("custom-tip-value").addEventListener("focus", function() {
-    document.getElementById("custom-tip").checked = true;
-});
+document.getElementById("custom-tip-value").addEventListener(`click`, handleEvent);
+document.getElementById("custom-tip-value").addEventListener(`keydown`, handleEvent);
+
+function handleEvent(event) {
+    if (event.type === "click" || (event.type === "keydown" && event.key === "Enter")) {
+        document.getElementById("custom-tip").checked = true;
+        document.querySelector('#custom-tip').value = event.target.value <= 9 ? `0${event.target.value}`: event.target.value;
+    }
+}
 
 inputs.forEach(input => {
     input.addEventListener('keydown', (e)=> {
@@ -32,10 +38,6 @@ radioButtons.forEach(radioBtn => {
 })
 })
 
-customTipInput.addEventListener('change', (event)=> {
-    document.querySelector('#custom-tip').value = event.target.value;
-});
-
 function submiting(e) {
 e.preventDefault();
 calculateTip();
@@ -43,7 +45,6 @@ calculateTip();
 
 function calculateTip(){
     let selectedValue = document.querySelector('input[name="tip"]:checked')?.value;
-    // customTipInput.checked == false ? customTipInput.value = "" : "";
 
     let percent = parseFloat(`1.${selectedValue}`);
 

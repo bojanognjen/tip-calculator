@@ -130,8 +130,8 @@
   input[type="radio"] {
     display: none;
   }
-
-  .custom > input {
+  
+  .custom-tip {
     width: 60%;
     height: 90%;
     border: none;
