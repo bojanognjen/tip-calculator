@@ -226,14 +226,19 @@
     padding: .5rem;
   }
 
-  button {
+  button, 
+  input {
     cursor: pointer;
   }
 
   .percent-div > *:not(:last-child):hover,
-  .reset:hover,
-  .tip-input:checked + label {
+  .reset:hover {
     background-color: hsl(172, 67%, 80%);
+    color: var(--very-dark-cyan);
+  }
+
+  .tip-input:checked + label {
+    background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
   }
 
@@ -245,6 +250,77 @@
 
   fieldset {
     border: none;
+  }
+
+  @media (min-width: 58rem) {
+    .calculator {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90vw;
+      max-width: 57.5rem;
+      height: 30.06rem;
+    }
+
+    .first-section {
+      max-width: 379px;
+      height: 388px;
+      max-height: 388px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .last-section {
+      width: 413px;
+      max-width: 413px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      padding: 3rem;
+    }
+
+    .reset {
+      margin-top: auto;
+      height: 48px;
+    }
+
+    .per-person {
+      height: 71px;
+    }
+
+    .percent-div {
+      max-width: 379px;
+      max-height: 112px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 1rem;
+      column-gap: 14px;
+    }
+
+    .select-tip {
+      height: 152px;
+    }
+
+    .span-and-gray-space {
+      max-height: 78px;
+    }
+
+    .gray-space {
+      max-height: 48px;
+    }
+
+    #custom-tip-value {
+      width: 90%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .percent-button {
+      width: 117px;
+      height: 48px;
+    }
   }
 
   
