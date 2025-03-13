@@ -19,23 +19,19 @@ function handleEvent(event) {
     }
 }
 
+function enter(e) {
+    if(e.key === 'Enter' || e.type === 'change') {
+        e.preventDefault();
+        submiting(e);
+    } 
+}
+
 inputs.forEach(input => {
-    input.addEventListener('keydown', (e)=> {
-        if(e.key === 'Enter') {
-            e.preventDefault();
-            submiting(e);
-        }
-
-})
-
+    input.addEventListener('keydown', enter)
 })
 
 radioButtons.forEach(radioBtn => {
-    radioBtn.addEventListener('change', (e)=> {
-            e.preventDefault();
-            submiting(e);
-
-})
+    radioBtn.addEventListener('change', enter)
 })
 
 function submiting(e) {
