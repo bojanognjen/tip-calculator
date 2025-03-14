@@ -1,5 +1,7 @@
 # Frontend Mentor - Tip calculator app
 
+To preview a page of this project you can click on link: https://bojanognjen.github.io/tip-calculator/
+
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
